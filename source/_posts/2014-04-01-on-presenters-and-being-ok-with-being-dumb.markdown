@@ -8,12 +8,12 @@ categories:
 
 A page in our app has a lot of tooltips and help text. All of this text is static. But then came this customer request:
 
-  "If the record is a Course Fee, show 'some text'. Otherwise, show this 'other text'."
+> "If the record is a Course Fee, show '**some text**'. Otherwise, show '**other text**'."
 
 Fees are implemented using [single table inheritance](http://www.martinfowler.com/eaaCatalog/singleTableInheritance.html), so I already know exactly what kind of fee they are. I could just throw this right in the view.
 
 ```ruby
-<% if @fee.class == Fee::Course %>
+<% if @fee.kind_of?(Fee::Course) %>
   some text
 <% else %>
   other text
