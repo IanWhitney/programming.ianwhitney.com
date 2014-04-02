@@ -10,6 +10,8 @@ A page in our app has a lot of tooltips and help text. All of this text is stati
 
 > "If the record is a Course Fee, show '**some text**'. Otherwise, show '**other text**'."
 
+<!-- more -->
+
 Fees are implemented using [single table inheritance](http://www.martinfowler.com/eaaCatalog/singleTableInheritance.html), so I already know exactly what kind of fee they are. I could just throw this right in the view.
 
 ```ruby
