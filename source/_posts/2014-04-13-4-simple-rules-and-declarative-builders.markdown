@@ -14,7 +14,7 @@ In a section on testing, Haines says:
 
 > In fact, over time I've developed a guideline for myself that external callers can't actually use the base constructor for an object. Put another way: the outside world can't use new to instantiate an object with an expectation of a specific state. Instead, there must be an explicitly named factory method on the class to create an object in a specific, valid state.
 
-I'm not sure factory is the right word here. My (admittedly incomplete) understanding is that a factory is a class that builds another class. But in the case he's talking about we're using a class' method to build an instance of the same class, which I think in the Builder pattern.
+I'm not sure factory is the right word here. My (admittedly incomplete) understanding is that a factory is a class that builds another class. But in the case he's talking about we're using a class' method to build an instance of the same class, which I think is the Builder pattern.
 
 Pattern pedantry aside, I tried putting this advice into practice this week and found it quite pleasing. Here's some old code. This is from a rake task that kicks off a data processing job. This job can be configured, but in this case we're using the default configuration.
 
